@@ -14,8 +14,6 @@ applicant10 = dict(name="Jackie Warner",age=32,address="789",street="Funt Dr",ci
 
 applicants = [applicant1,applicant2,applicant3,applicant4,applicant5,applicant6,applicant7,applicant8,applicant9,applicant10]
 
-#print(applicants[0]["age"]) 
-
 def is_eligble_applicant(applicant):
     """ Takes an applicant as a parameter and returns a boolean that indicates whether or not the applicant's 
         age is greater than 18.
@@ -109,9 +107,7 @@ def filter_active_applicants(applicant_list):
     print("\n")
     return active_list
 
-filter_active_applicants(applicants)
-
-#Define a function "report_completed_applicants" which 
+filter_active_applicants(applicants) 
 
 def report_completed_applicants(applicant_list):
     """"Takes a list of applicants 

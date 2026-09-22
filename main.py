@@ -1,14 +1,4 @@
 
-#An individual applicant to the program has a lot of data that must be kept up to date. This data includes:
-#name
-#age (Realistically, this would be date of birth, but we'll keep it simple for now)
-#address
-#street
-#city
-#state
-#zip code
-#program status (one of ['Applied', 'Accepted', 'Active', 'Completed', 'Dismissed', 'Rejected'])
-
 status = ['Applied', 'Accepted', 'Active', 'Completed', 'Dismissed', 'Rejected']
 
 #applicant = {
@@ -35,11 +25,11 @@ applicants = [
 {"name": "Jackie Warner ", "age" : 32, "address" : "789", "street" : "Funt Dr", "city" : "Greenbelt", "state" : "GA", "zip" : "12548", "status" : status[1]}
 ]
 
-#print(applicants[0]["age"])
-#Define a function called "is_eligible_applicant" that takes an applicant as a parameter and returns a boolean that indicates whether or not the applicant's 
-# age is greater than 18.
+#print(applicants[0]["age"]) 
 
 def is_eligble_applicant(applicant):
+    """ Takes an applicant as a parameter and returns a boolean that indicates whether or not the applicant's 
+        age is greater than 18."""
     age_var = applicant["age"]
    
     if age_var >= 18:
@@ -52,12 +42,10 @@ if is_eligble_applicant(applicants[0]):
 else:
     print("This applicant is ineligble.")
 
-#Define a function called "is_active_applicant" 
-#that takes an applicant as a parameter and returns
-#a boolean that indicates whether or not the applicant's 
-#program status is "Active"
-
 def is_active_applicant(applicant):
+    """Takes an applicant as a parameter and returns
+        a boolean that indicates whether or not the applicant's 
+        program status is "Active""""
     status_var = applicant["status"]
     if status_var == "Active":
         return True
@@ -67,12 +55,11 @@ def is_active_applicant(applicant):
 if is_active_applicant(applicants[0]):
     print("This applicant is active.")
 else:
-    print("This applicant is inactive.")
-
-#Define a function "filter_applicants_by_eligibility" which takes a list of applicants 
-#and returns a list of eligible applicants.
+    print("This applicant is inactive.") 
 
 def filter_applicants_by_eligibility(applicant_list):
+    """Takes a list of applicants 
+        and returns a list of eligible applicants."""
     eligible_list = []
     for applicant in applicant_list:
         if applicant["age"] >= 18:
@@ -87,10 +74,11 @@ def filter_applicants_by_eligibility(applicant_list):
 
 filter_applicants_by_eligibility(applicants)
 
-#Define a function "filter_active_applicants" which takes a list of applicants 
-# and returns a list of applicants with an active program status.
+#Define a function "filter_active_applicants" which 
 
 def filter_active_applicants(applicant_list):
+    """Takes a list of applicants 
+         and returns a list of applicants with an active program status."""
     active_list = []
     for applicant in applicant_list:
         if applicant["status"] == "Active":
@@ -105,10 +93,11 @@ def filter_active_applicants(applicant_list):
 
 filter_active_applicants(applicants)
 
-#Define a function "report_completed_applicants" which takes a list of applicants 
-# and returns the number of applicants with the program status of "Completed".
+#Define a function "report_completed_applicants" which 
 
 def report_completed_applicants(applicant_list):
+    """"Takes a list of applicants 
+            and returns the number of applicants with the program status of "Completed"."""
     completed_list = []
     for applicant in applicant_list:
         if applicant["status"] == "Completed":
@@ -122,19 +111,3 @@ def report_completed_applicants(applicant_list):
     print("\n")
 
 report_completed_applicants(applicants)
-
-#class Applicant:
-#    def __init__(self,name,age,address,street,city,state,zip,status):
-#        self.name = name
-#        self.age = age
-#        self.address = address
-#        self.street = street
-#        self.city = city
-#        self.state = state
-#        self.zip = zip
-#        self.status = status
-
-#    def display_info(self)
-#        print(str(self.name)+ ", " + str(self.age)+ ", " + str(self.address)+ ", " +
-#              str(self.street)+ ", " + str(self.city)+ ", " + str(self.state)+ ", " +
-#              str(self.zip)+ ", " + str(self.p_status)

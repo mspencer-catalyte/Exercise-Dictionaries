@@ -6,7 +6,7 @@ applicant2 = dict(name="Bruce Lee",age=52,address="1343",street="IDK Ave",city="
 applicant3 = dict(name="Charlie Murphy",age=13,address="3343",street="Hall Ln",city="Nantucket",state="NC",zip="84549",status=status[2])
 applicant4 = dict(name="Dean Wilson",age=16,address="984",street="Pace Ave",city="Franklin",state="IL",zip="07552",status=status[3])
 applicant5 = dict(name="Esteban Ortega",age=18,address="777",street="Luck St",city="Foster",state="NY",zip="20209",status=status[4])
-applicant6 = dict(name="Florence Macine",age=19,address="656",street="Calumm Dr",city="Newark",state="DE",zip="08312", status=status[5])
+applicant6 = dict(name="Florence Machine",age=19,address="656",street="Calumm Dr",city="Newark",state="DE",zip="08312", status=status[5])
 applicant7 = dict(name="Giana Wallace",age=99,address="7535",street="Not Way",city="Wheaton",state="MD",zip="02265",status=status[2])
 applicant8 = dict(name="Henderson Pak",age=73,address="244",street="Heart St",city="Kensington",state="CA",zip="84521",status=status[3])
 applicant9 = dict(name="Imogen Heap",age=21,address="782",street="Boop Pl",city="Haplern",state="FL",zip="59643",status=status[4])
@@ -32,11 +32,6 @@ def is_eligble_applicant(applicant):
     else:
         return False
 
-if is_eligble_applicant(applicants[0]):
-    print("This applicant is eligble.")
-else:
-    print("This applicant is ineligble.")
-
 def is_active_applicant(applicant):
     """Takes an applicant as a parameter and returns
         a boolean that indicates whether or not the applicant's 
@@ -54,11 +49,6 @@ def is_active_applicant(applicant):
     else:
         return False
 
-if is_active_applicant(applicants[0]):
-    print("This applicant is active.")
-else:
-    print("This applicant is inactive.") 
-
 def filter_applicants_by_eligibility(applicant_list):
     """Takes a list of applicants 
         and returns a list of eligible applicants.
@@ -75,13 +65,9 @@ def filter_applicants_by_eligibility(applicant_list):
             eligible_list.append(applicant["name"])
         else:
             pass
-
-    print("Applicants that are eligble for the program.")
-    print(*eligible_list, sep=", ")
-    print("\n")
     return eligible_list
 
-filter_applicants_by_eligibility(applicants)
+
 
 #Define a function "filter_active_applicants" which 
 
@@ -101,13 +87,9 @@ def filter_active_applicants(applicant_list):
             active_list.append(applicant["name"])
         else:
             pass
-
-    print("Applicants that are active in the program.")
-    print(*active_list, sep=", ")
-    print("\n")
     return active_list
 
-filter_active_applicants(applicants) 
+
 
 def report_completed_applicants(applicant_list):
     """"Takes a list of applicants 
@@ -126,12 +108,8 @@ def report_completed_applicants(applicant_list):
             completed_list.append(applicant["name"])
         else:
             pass
-
-    print("Number of applicants that have completed the program:")
-    print(len(completed_list))
-    print(*completed_list, sep=", ")
-    print("\n")
-
     return len(completed_list)
 
-report_completed_applicants(applicants)
+list_of_eligibles = filter_applicants_by_eligibility(applicants)
+list_of_actives = filter_active_applicants(applicants) 
+number_of_completed = report_completed_applicants(applicants)

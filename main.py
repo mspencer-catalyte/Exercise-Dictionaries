@@ -27,7 +27,7 @@ def is_eligble_applicant(applicant):
     """
     age_var = applicant["age"]
    
-    if age_var >= 18:
+    if age_var > 18:
         return True
     else:
         return False
@@ -65,11 +65,7 @@ def filter_applicants_by_eligibility(applicant_list):
             eligible_list.append(applicant["name"])
         else:
             pass
-    return eligible_list
-
-
-
-#Define a function "filter_active_applicants" which 
+    return eligible_list 
 
 def filter_active_applicants(applicant_list):
     """Takes a list of applicants 
@@ -88,8 +84,6 @@ def filter_active_applicants(applicant_list):
         else:
             pass
     return active_list
-
-
 
 def report_completed_applicants(applicant_list):
     """"Takes a list of applicants 

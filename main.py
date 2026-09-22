@@ -1,6 +1,3 @@
-
-status = ['Applied', 'Accepted', 'Active', 'Completed', 'Dismissed', 'Rejected']
-
 #applicant = {
 #    "name": "",
 #    "age" : 0,
@@ -11,6 +8,8 @@ status = ['Applied', 'Accepted', 'Active', 'Completed', 'Dismissed', 'Rejected']
 #    "zip": "",
 #    "status": ""
 #}
+
+status = ['Applied', 'Accepted', 'Active', 'Completed', 'Dismissed', 'Rejected']
 
 applicants = [ 
 {"name": "Abigail Fontane", "age" : 44, "address" : "123", "street" : "Gibby St", "city" : "Havalina", "state" : "NY", "zip" : "94949", "status" : status[2]},
@@ -45,7 +44,7 @@ else:
 def is_active_applicant(applicant):
     """Takes an applicant as a parameter and returns
         a boolean that indicates whether or not the applicant's 
-        program status is "Active""""
+        program status is "Active"""
     status_var = applicant["status"]
     if status_var == "Active":
         return True
